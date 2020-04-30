@@ -37,6 +37,10 @@
       z-index: 6;
     }
   }
+  &__tab-wrapper {
+    height: calc(90vh - 110px);
+    overflow: auto;
+  }
   &__stats {
   }
   &__list {
