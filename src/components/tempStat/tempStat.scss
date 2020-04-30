@@ -1,0 +1,37 @@
+.temp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__base {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #00002b;
+    border-radius: 15px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+  }
+  &__inner {
+    opacity: 0.8;
+    height: 100%;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .temp-stat {
+    &__base {
+      max-width: none;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+}

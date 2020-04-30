@@ -1,0 +1,8 @@
+.gear {
+  > .row {
+    justify-content: space-between;
+  }
+  &__item {
+    line-height: 35px;
+  }
+}

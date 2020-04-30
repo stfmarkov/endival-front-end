@@ -1,0 +1,54 @@
+.inventory {
+  height: 100%;
+  width: 100%;
+  &__tab {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    &:nth-of-type(1) {
+      transform: rotate(2deg);
+    }
+    &:nth-of-type(3) {
+      transform: rotate(-2deg);
+    }
+    &_active {
+      z-index: 5;
+    }
+  }
+  &__sticy {
+    position: absolute;
+    width: 115px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 15px;
+    background: #08d5ef;
+    border-radius: 5px;
+    cursor: pointer;
+
+    top: -75px;
+    left: 100px;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    &_1 {
+      left: 60px;
+    }
+    &_2 {
+      left: 135px;
+    }
+    &_3 {
+      left: 210px;
+    }
+
+    &_4 {
+      left: auto;
+      right: -90px;
+    }
+    &_5 {
+      left: auto;
+      right: -15px;
+    }
+  }
+}

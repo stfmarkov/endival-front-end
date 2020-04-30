@@ -1,0 +1,12 @@
+.experience {
+  &__add {
+    display: flex;
+  }
+  h3,
+  .input {
+    flex: 1;
+  }
+  .input {
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,14 @@
+.login {
+  min-width: 500px;
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .login {
+    width: 90%;
+    min-width: 0;
+  }
+}

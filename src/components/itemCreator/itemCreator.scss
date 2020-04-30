@@ -1,0 +1,29 @@
+.item-creator {
+  &__name {
+    width: 100%;
+    padding-right: 15px;
+  }
+  &__weight {
+    max-width: 100px;
+  }
+  &__selector {
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+    span {
+      padding-right: 15px;
+      order: -2;
+    }
+  }
+  &__stat {
+    width: 80px;
+    &_shieldType,
+    &_weaponType,
+    &_armorType {
+      order: -1;
+      width: auto;
+      .select {
+        min-width: 200px;
+      }
+    }
+  }
+}

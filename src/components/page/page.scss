@@ -1,0 +1,30 @@
+.page {
+  background: url("../../imgs/table-med2.jpg") center center/cover no-repeat;
+  // background: url("../../imgs/background.jpg") center center/cover no-repeat;
+
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-shadow: 0 0 20px rgba(#fff, 0.5);
+  font-weight: 700;
+
+  &__btn {
+    position: fixed !important;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
