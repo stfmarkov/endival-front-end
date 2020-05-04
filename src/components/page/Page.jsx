@@ -32,7 +32,7 @@ const Page = () => {
     // Set user in the context
     if (newUser.token === user.data.token) return;
     user.dispatch({
-      type: "LOGIN",
+      type: "UPDATE",
       payload: { email: newUser.email, token: newUser.token, id: newUser.id },
     });
   };

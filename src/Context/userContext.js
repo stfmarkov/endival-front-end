@@ -21,12 +21,13 @@ const UserContextProvider = (props) => {
           let token = "Bearer ";
           token += res.data.token;
           dispatch({
-            type: "LOGIN",
+            type: "UPDATE",
             payload: {
               email: payload.email,
               password: payload.password,
               token,
               id: res.data.id,
+              characters: [],
             },
           });
           resolve();
@@ -64,7 +65,7 @@ const UserContextProvider = (props) => {
       axios(config)
         .then((res) => {
           dispatch({
-            type: "GET_CHARS",
+            type: "UPDATE",
             payload: { characters: res.data.characters },
           });
         })
