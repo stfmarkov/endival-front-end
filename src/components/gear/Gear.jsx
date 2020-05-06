@@ -61,9 +61,13 @@ export default function Gear({ items }) {
       ? equipedGear(part2name)[side].blunt
       : 0;
 
-    const piercing = Math.floor((part1Piercing + part2Piercing) / 2);
-    const slashing = Math.floor((part1Slashing + part2Slashing) / 2);
-    const blunt = Math.floor((part1Blunt + part2Blunt) / 2);
+    let piercing = (part1Piercing + part2Piercing) / 2;
+    let slashing = (part1Slashing + part2Slashing) / 2;
+    let blunt = (part1Blunt + part2Blunt) / 2;
+
+    piercing = piercing > 0 && piercing < 1 ? 1 : Math.floor(piercing);
+    slashing = slashing > 0 && slashing < 1 ? 1 : Math.floor(slashing);
+    blunt = blunt > 0 && blunt < 1 ? 1 : Math.floor(blunt);
 
     setItem({ piercing, slashing, blunt });
   };
@@ -177,11 +181,25 @@ export default function Gear({ items }) {
             {equipedGear("hand")[0] ? equipedGear("hand")[0].blunt : "0"}
           </div>
           <div className="gear__item">
+            <span>Рамо - </span>
+            {equipedGear("arm")[0] ? equipedGear("arm")[0].name : ""} - М
+            {equipedGear("arm")[0] ? equipedGear("arm")[0].piercing : "0"} / С
+            {equipedGear("arm")[0] ? equipedGear("arm")[0].slashing : "0"} / T
+            {equipedGear("arm")[0] ? equipedGear("arm")[0].blunt : "0"}
+          </div>
+          <div className="gear__item">
             <span>Ръка - </span>
             {equipedGear("hand")[1] ? equipedGear("hand")[1].name : ""} - M
             {equipedGear("hand")[1] ? equipedGear("hand")[1].piercing : "0"} / С
             {equipedGear("hand")[1] ? equipedGear("hand")[1].slashing : "0"} / T
             {equipedGear("hand")[1] ? equipedGear("hand")[1].blunt : "0"}
+          </div>
+          <div className="gear__item">
+            <span>Рамо - </span>
+            {equipedGear("arm")[1] ? equipedGear("arm")[1].name : ""} - М
+            {equipedGear("arm")[1] ? equipedGear("arm")[1].piercing : "0"} / С
+            {equipedGear("arm")[1] ? equipedGear("arm")[1].slashing : "0"} / T
+            {equipedGear("arm")[1] ? equipedGear("arm")[1].blunt : "0"}
           </div>
           <div className="gear__item">
             <span>Крак - </span>
