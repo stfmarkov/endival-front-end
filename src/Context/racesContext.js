@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 import { racesReducer } from '../reducers/racesReducer';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://endival-api.herokuapp.com';
+axios.defaults.baseURL = 'http://68.183.214.0:4000';
 
 
 export const RacesContext = createContext();

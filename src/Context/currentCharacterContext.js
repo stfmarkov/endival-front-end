@@ -1,7 +1,7 @@
 import React, { createContext, useState, useReducer } from "react";
 import { currentCharacterReducer } from '../reducers/currentCharacterReducer';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://endival-api.herokuapp.com';
+axios.defaults.baseURL = 'http://68.183.214.0:4000';
 
 
 export const CurrentCharacterContext = createContext();

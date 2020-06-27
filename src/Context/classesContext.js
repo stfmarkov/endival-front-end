@@ -1,7 +1,8 @@
 import React, { createContext, useReducer } from "react";
 import { classesReducer } from '../reducers/classesReducer';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://endival-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://endival-api.herokuapp.com';
+axios.defaults.baseURL = 'http://68.183.214.0:4000';
 
 
 export const ClassesContext = createContext();
