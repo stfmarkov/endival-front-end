@@ -18,14 +18,22 @@ const Page = () => {
 
   const getLogedUser = () => {
     // Get user data from the local storage
-    const user = localStorage.getItem("logedUser");
-    if (user) return JSON.parse(user);
-    return;
+    let user;
+    try {
+      user = localStorage.getItem("logedUser");
+    } catch (error) {
+      console.log(error);
+    }
+    return user ? JSON.parse(user) : '';
   };
 
   const saveLogedUser = (user) => {
     // Set user data to the local storage
-    localStorage.setItem("logedUser", JSON.stringify(user));
+    try {
+      localStorage.setItem("logedUser", JSON.stringify(user));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const setLogedUser = (newUser, user) => {

@@ -51,7 +51,7 @@ const UserContextProvider = (props) => {
     });
   };
 
-  const getChars = () => {
+  const getChars = () => {      
     return new Promise((resolve, reject) => {
       if (!data.token) return;
       let config = {
